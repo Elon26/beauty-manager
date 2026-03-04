@@ -1,0 +1,28 @@
+diff --git a/src/Image.tsx b/src/Image.tsx
+index 7721bd96a93a2b99c338670f0b01b9bff9b7c900..816552dfdd9b4d1da26936f57c1449556f40dafd 100644
+--- a/src/Image.tsx
++++ b/src/Image.tsx
+@@ -6,11 +6,11 @@ import { StyleSheet } from 'react-native';
+ 
+ import ExpoImage from './ExpoImage';
+ import {
+-  ImageLoadOptions,
+-  ImagePrefetchOptions,
+-  ImageProps,
+-  ImageRef,
+-  ImageSource,
++    ImageLoadOptions,
++    ImagePrefetchOptions,
++    ImageProps,
++    ImageRef,
++    ImageSource,
+ } from './Image.types';
+ import ImageModule from './ImageModule';
+ import { resolveContentFit, resolveContentPosition, resolveTransition } from './utils';
+@@ -221,3 +221,6 @@ export class Image extends React.PureComponent<ImageProps> {
+     );
+   }
+ }
++
++import { cssInterop } from 'nativewind';
++cssInterop(Image, { className: { target: 'style' } });

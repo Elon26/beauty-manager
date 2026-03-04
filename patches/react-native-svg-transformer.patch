@@ -1,0 +1,51 @@
+diff --git a/index.js b/index.js
+index 9dd500be06db94d0c08c8ba8d77fa3787b81c3c2..274ae5f0b3ed1ded60ab29796564c3aab2a4a908 100644
+--- a/index.js
++++ b/index.js
+@@ -44,6 +44,18 @@ const defaultSVGRConfig = {
+   }
+ };
+ 
++// Inject interop snippet into the transformed code
++const injectedInterop = `
++import { cssInterop } from 'nativewind';
++cssInterop(Svg, { className: { target: 'style' } });
++
++`;
++
++function injectInteropAfterTransformation(transformedSrc) {
++  // Append the interop snippet after the transformed SVG component
++  return `${transformedSrc}\n${injectedInterop}`;
++}
++
+ function createTransformer(transformer) {
+   return async ({ src, filename, ...rest }) => {
+     if (filename.endsWith(".svg")) {
+@@ -51,8 +63,15 @@ function createTransformer(transformer) {
+       const svgrConfig = config
+         ? { ...defaultSVGRConfig, ...config }
+         : defaultSVGRConfig;
++
++      // Transform the SVG to a React component
++      const transformedSrc = await transform(src, svgrConfig);
++
++      // Inject the interop snippet after the transformation
++      const finalSrc = injectInteropAfterTransformation(transformedSrc);
++
+       return transformer.transform({
+-        src: await transform(src, svgrConfig),
++        src: finalSrc,
+         filename,
+         ...rest
+       });
+@@ -66,10 +85,6 @@ module.exports = {
+   expoTransformer,
+   createTransformer,
+   transform: createTransformer(
+-    /*
+-     * Expo v50.0.0 has begun using @expo/metro-config/babel-transformer as its upstream transformer.
+-     * To avoid breaking projects, we should prioritze that package if it is available.
+-     **/
+     expoTransformer || reactNativeTransformer
+   )
+ };

@@ -1,0 +1,48 @@
+{
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "deno.enablePaths": [
+    "supabase/functions"
+  ],
+  "deno.lint": true,
+  "deno.unstable": [
+    "bare-node-builtins",
+    "byonm",
+    "sloppy-imports",
+    "unsafe-proto",
+    "webgpu",
+    "broadcast-channel",
+    "worker-options",
+    "cron",
+    "kv",
+    "ffi",
+    "fs",
+    "http",
+    "net"
+  ],
+  "files.exclude": {
+    ".npmignore": true,
+    ".npmrc": true,
+    "README.md": true,
+    "babel.config.js": true,
+    "declarations.d.ts": true,
+    "eas.json": true,
+    "expo-env.d.ts": true,
+    "global.css": true,
+    "metro.config.js": true,
+    "patches": true,
+    "prettier.config.js": true
+  },
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    ".*ClassName"
+  ],
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "tv\\(([^)]*)\\)",
+      "[\"'`]([^\"'`]*).*?[\"'`]"
+    ]
+  ]
+}

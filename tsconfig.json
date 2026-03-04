@@ -1,0 +1,26 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["dom", "DOM.Iterable", "esnext", "ESNext.Array"],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/db/*": ["./db/*"],
+      "@/svg/*": ["./assets/svg/*"],
+      "@/images/*": ["./assets/images/*"],
+      "@/animations/*": ["./assets/animations/*"],
+      "@/src/modules/*": ["./src/modules/*"],
+      "@/modules/*": ["./modules/*"]
+    }
+  },
+  "include": [
+    "*.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "db/**/*.ts",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "env.*.yml",
+    "nativewind-env.d.ts"
+  ]
+}

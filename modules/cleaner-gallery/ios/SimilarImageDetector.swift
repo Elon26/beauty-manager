@@ -1,0 +1,147 @@
+import ExpoModulesCore
+import Foundation
+import Photos
+
+public class SimilarImageDetector: NSObject {
+  @objc static func requiresMainQueueSetup() -> Bool {
+    return false
+  }
+
+  public func fetchImagesFromGallery(resultHandler: @escaping ([PHAsset]) -> Void) {
+    PHPhotoLibrary.requestAuthorization { status in
+      switch status {
+      case .authorized:
+        let fetchOptions = PHFetchOptions()
+        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        fetchOptions.includeAssetSourceTypes = [.typeUserLibrary]
+
+        let assets: PHFetchResult = PHAsset.fetchAssets(
+          with: .image, options: fetchOptions
+        )
+
+        var results: [PHAsset] = []
+
+        for i in 0..<assets.count {
+          let asset = assets[i]
+          results.append(asset)
+        }
+
+        resultHandler(results)
+      case .denied, .restricted:
+        print("Not allowed")
+      case .notDetermined:
+        print("Not determined yet")
+      case .limited:
+        print("Not allowed")
+      @unknown default:
+        print("Not allowed")
+      }
+    }
+  }
+
+  func preprocessAssets(assets: [PHAsset]) -> [NSDictionary] {
+    var resuls = [NSDictionary]()
+
+    for i in 0..<assets.count {
+      let asset = assets[i]
+
+      let resources = PHAssetResource.assetResources(for: asset)
+      let resource = resources.first
+      let size = resources.map { $0.value(forKey: "fileSize") as? Int64 ?? 0 }.reduce(0) {
+        acc, item in acc + item
+      }
+      let originalFilename = resource?.originalFilename
+      let createdAt = asset.creationDate
+
+      resuls.append([
+        "id": asset.localIdentifier,
+        "name": originalFilename ?? "",
+        "createdAt": createdAt?.timeIntervalSince1970 ?? -1,
+        "size": size,
+      ])
+    }
+
+    return resuls
+  }
+
+  func findSimilarFast(interval: Double, resolve: @escaping ([[PHAsset]]) -> Void) {
+    PHPhotoLibrary.requestAuthorization { status in
+      var groups: [[PHAsset]] = []
+      guard status == .authorized || status == .limited else {
+        resolve(groups)
+        return
+      }
+
+      let fetchOptions = PHFetchOptions()
+      fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+      fetchOptions.includeAssetSourceTypes = [.typeUserLibrary]
+      let assets: PHFetchResult = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+      var currentGroup = [assets[0]]
+      var currentGroupTime = assets[0].creationDate?.timeIntervalSince1970 ?? 0
+
+      for i in 1..<assets.count {
+        let asset = assets[i]
+        let createdAt = (asset.creationDate?.timeIntervalSince1970 ?? 0)
+        let timeOffset = currentGroupTime - createdAt
+
+        if timeOffset < interval {
+          currentGroup.append(asset)
+        } else {
+          if currentGroup.count > 1 {
+            groups.append(currentGroup)
+          }
+          currentGroup = [asset]
+        }
+
+        currentGroupTime = createdAt
+      }
+
+      if currentGroup.count > 1 {
+        groups.append(currentGroup)
+      }
+      resolve(groups)
+    }
+  }
+
+  @objc
+  func findSimilarImagesFromGallery(interval: Double, resolve: @escaping EXPromiseResolveBlock) {
+    fetchImagesFromGallery(resultHandler: {
+      (results: [PHAsset]) in
+      if results.count == 0 {
+        resolve([[NSDictionary]]() as NSArray)
+        return
+      }
+
+      let sortedAssets = results
+
+      var groups = [[NSDictionary]]()
+      var currentGroup = [sortedAssets[0]]
+      var currentGroupTime = sortedAssets[0].creationDate?.timeIntervalSince1970 ?? 0
+
+      for i in 1..<sortedAssets.count {
+        let asset = sortedAssets[i]
+        let createdAt = (asset.creationDate?.timeIntervalSince1970 ?? 0)
+        let timeOffset = currentGroupTime - createdAt
+
+        if timeOffset < interval {
+          currentGroup.append(asset)
+        } else {
+          if currentGroup.count > 1 {
+            groups.append(self.preprocessAssets(assets: currentGroup))
+          }
+
+          currentGroup = [asset]
+        }
+
+        currentGroupTime = createdAt
+      }
+
+      if currentGroup.count > 1 {
+        groups.append(self.preprocessAssets(assets: currentGroup))
+      }
+
+      let items = (groups as NSArray)
+      resolve(items)
+    })
+  }
+}

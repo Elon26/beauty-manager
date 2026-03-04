@@ -1,0 +1,434 @@
+{
+  "basic": {
+    "access-denied": "Access denied",
+    "back": "Back",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "create": "Create",
+    "delete": "Delete",
+    "dont-show-again": "Don’t show again",
+    "done": "Done",
+    "error": "Error",
+    "fasting-tracker": "Fasting Tracker",
+    "nothing-here": "Nothing here",
+    "timer-off": "Timer Off",
+    "privacy-policy": "Privacy Policy",
+    "pro": "pro",
+    "save": "Save",
+    "start": "Start",
+    "stop": "Stop",
+    "terms-of-use": "Terms of Use",
+    "unknown": "unknown",
+    "warning": "Warning",
+    "weekdays": {
+      "monday": "Mn",
+      "tuesday": "Ts",
+      "wednesday": "Wd",
+      "thursday": "Th",
+      "friday": "Fr",
+      "saturday": "St",
+      "sunday": "Sn"
+    }
+  },
+  "notifications": {
+    "fasting-end-body": "Nice work! You’ve completed your fast. Time to eat and recharge.",
+    "fasting-end-title": "Fast complete",
+    "fasting-start-body": "Your fasting period starts now. Take it easy — you’ve got this.",
+    "fasting-start-title": "Fasting time"
+  },
+  "pages": {
+    "achievements": {
+      "achieved": "Achieved",
+      "ambassador-of-awareness": "Ambassador of Awareness",
+      "appetite-tamer": "Appetite Tamer",
+      "body-on-autopilot": "Body on Autopilot",
+      "days-is-a-row_one": "{{count, number}} day in a row",
+      "days-is-a-row_other": "{{count, number}} days in a row",
+      "fasting-in-control": "Fasting in Control",
+      "fasting-warrior": "Fasting Warrior",
+      "first-step-to-control": "First Step to Control",
+      "golden-health": "Golden Health",
+      "habit-master": "Habit Master",
+      "in-progress": "In Progress",
+      "intermittent-master": "Intermittent Master",
+      "iron-discipline": "Iron Discipline",
+      "life-without-overeating": "Life Without Overeating",
+      "metabolism-guru": "Metabolism Guru",
+      "mindful-eater": "Mindful Eater",
+      "page-name": "Achievements",
+      "pro-level-ascetic": "Pro-Level Ascetic",
+      "routine-guardian": "Routine Guardian",
+      "willpower-awakened": "Willpower Awakened"
+    },
+    "diary": {
+      "activity": "Activity",
+      "activity-bad": "Isn't it a perfect time for a little walk?",
+      "activity-good": "You've walked an excellent distance, keep it up!",
+      "are-you-sure": "Are you sure?",
+      "add-photo": "Add photo",
+      "cannot-save-the-photo": "Cannot save the photo",
+      "checking": "checking",
+      "page-name": "Photo Diary",
+      "pedometer-unavailable": "Pedometer is currently unavailable. Please check your permissions.",
+      "photos": "Photos",
+      "premium-features": "Premium features",
+      "something-went-wrong": "Something went wrong",
+      "steps": "st.",
+      "upgrade-to-premium": "Upgrade to Premium for unlimited access",
+      "you-using-free-version": "You're using the free version"
+    },
+    "fasting-tracker": {
+      "change-plan-warning": "Continuing will stop your tracker and cause you to lose all achievement progress",
+      "during-fasting-title": "During Fasting",
+      "during-fasting-text-first": "Drink water or unsweetened tea to curb false hunger and aid metabolism",
+      "during-fasting-text-second": "Skip intense workouts while fasting. Walk or stretch instead. Train hard when you're fueled",
+      "fasting": "Fasting",
+      "eating": "Eating window",
+      "notify-me-when-fasting-ends": "Notify me when fasting ends",
+      "notify-me-when-fasting-starts": "Notify me when fasting starts",
+      "page-name": "Fasting Tracker",
+      "photo-diary": "Photo-Diary",
+      "change-your-plan": "Change your plan",
+      "stop-tracker-warning": "If you stop the tracker, all your achievement progress will be lost",
+      "time-left": "time left"
+    },
+    "main": {
+      "contacts-organizer": "Contacts organizer",
+      "eating-time-left": "Eating window time left",
+      "fasting-time-left": "Fasting time left",
+      "make-your-data": "Make your data visible only for you",
+      "my-passwords": "My passwords",
+      "gallery-organizer": "Gallery organizer",
+      "secret-folder": "Secret folder",
+      "select-plan": "Select plan",
+      "settings": "Settings",
+      "smart-clean-up": "Smart clean up",
+      "smart-cleaning": "Smart Cleaning",
+      "speed-test": "Speed test",
+      "system-info": "System info",
+      "your-plan": "Your plan",
+      "your-system-is-loaded": "YOUR SYSTEM IS LOADED ON"
+    },
+    "onboarding": {
+      "title-a-1": "Take care of your body",
+      "title-a-2": "Intermittent fasting is simple now",
+      "title-a-3": "Track your progress over time",
+      "title-b-1": "Silence “Full Storage” alerts forever",
+      "title-b-2": "Spot and erase hidden duplicates",
+      "title-b-3": "Reclaim minutes stolen by clutter",
+      "title-b-4": "Work faster, not harder",
+      "subtitle-b-1": "81% more",
+      "subtitle-b-2": "79% fewer",
+      "subtitle-b-3": "6 hours",
+      "subtitle-b-4": "60% quicker",
+      "text-a-1": "Track meals, weight, and progress—all in one place",
+      "text-a-2": "Choose your plan, start your timer, and reach your goals",
+      "text-a-3": "Document your journey with a visual progress diary and weight chart",
+      "text-b-1": "A tidy device just feels lighter",
+      "text-b-2": "Slash duplicate files in seconds",
+      "text-b-3": "Smarter phone → smarter day",
+      "text-b-4": "60% speed boost — just by staying clean",
+      "6hr": "6hr",
+      "more-storage-space": "More storage space",
+      "with-app-name": "With {{appName, string}}",
+      "without-app-name": "Without {{appName, string}}"
+    },
+    "paywall": {
+      "additional-text": "{{trialPeriod, string}} free, then {{price, string}} per {{subscriptionPeriod, string}}, cancel anytime",
+      "cancel-anytime": "Cancel anytime",
+      "features": {
+        "title-one": "All Fasting Plans",
+        "title-two": "Achievements",
+        "title-three": "Photo Diary",
+        "title-four": "Apple Health",
+        "description-one": "Unlock every intermittent fasting schedule: 12:12 to 22:2, MWF, TTS, and fully custom plans",
+        "description-two": "Earn all 15+ motivational badges and track your willpower progress, celebrate every milestone",
+        "description-three": "Add as many progress photos as you want with dates and notes",
+        "description-four": "Syncs with Apple Health for activity and steps"
+      },
+      "get-full-access": "Get full access to fasting plans, photo diary and achievements",
+      "no-payment-due": "No Payment Due Now",
+      "no-purchases-found": "No purchases found",
+      "purchase-failed": "Purchase failed",
+      "purchase-restored": "Purchase restored",
+      "restore-purchases": "Restore Purchases",
+      "start-trial": "Start {{text, string}} Free Trial",
+      "trial-period": "{{trialPeriod, string}} trial period",
+      "unlock-everything": "Get full access to all features"
+    },
+    "pin-code": {
+      "add-protection": "Add Protection",
+      "create-pin-code": "Create pin-code",
+      "enter-pin-code": "Enter pin-code",
+      "later": "Later",
+      "protect-secret-folder-text": "Secure Folder delivers powerful, encrypted storage built right into your device. By setting a reliable passcode, you safeguard private files and keep them inaccessible to anyone without permission",
+      "protect-secret-folder-title": "Protect Secret Folder"
+    },
+    "profile": {
+      "age": "Age",
+      "agender": "Agender",
+      "cm": "cm",
+      "enter-your-name": "Enter your name",
+      "female": "Female",
+      "ft": "ft",
+      "height": "Height",
+      "kg": "kg",
+      "lbs": "lbs",
+      "male": "Male",
+      "name": "Name",
+      "page-name": "Profile setup",
+      "personalize": "Personalize fasting insights, calculate progress, and integrate with HealthKit",
+      "sex": "Sex",
+      "tell-us": "Tell us about yourself",
+      "weight": "Weight"
+    },
+    "secret-folder": {
+      "autofill": {
+        "autofill-passwords": "AutoFill Passwords",
+        "button": "Continue",
+        "enable-autofill-passwords": "Enable AutoFill Passwords",
+        "go-to-settings": "Go to your phone Settings",
+        "passwords": "Passwords",
+        "password-options": "Password Options",
+        "select-app": "Select {{app}}",
+        "step": "Step {{n}}",
+        "tap-passwords-accounts": "Tap Passwords & Accounts",
+        "tap-password-options": "Tap Password Options"
+      },
+      "contacts": {
+        "add-contact": "Add Contact"
+      },
+      "gallery": {
+        "add-media": "Add media",
+        "delete-media": "Delete ({{count}} media)"
+      },
+      "main": {
+        "contacts_one": "{{count}} Contact",
+        "contacts_other": "{{count}} Contacts",
+        "page-name": "Secret Folder",
+        "passwords_one": "{{count}} Password",
+        "passwords_other": "{{count}} Passwords",
+        "photos_one": "{{count}} Photo",
+        "photos_other": "{{count}} Photos",
+        "secret-folder-not-protected-text": "Add FaceID or PIN-code authentication to protect the privacy of your data",
+        "secret-folder-not-protected-title": "Your Secret Folder is not protected!",
+        "secret-contacts": "Secret Contacts",
+        "secret-gallery": "Secret Gallery",
+        "secret-passwords": "Secret Passwords",
+        "what-is-secret-folder-text": "Secret Folder is your private, secure space inside the app where you can safely store photos, videos, contacts, and passwords. Everything you add here is protected with PIN, Face ID, or Touch ID, so only you can access it",
+        "what-is-secret-folder-title": "What is Secret Folder?"
+      },
+      "passwords": {
+        "add-password": "Add password",
+        "copied": "Copied",
+        "delete-multiple": {
+          "description": "Selected passwords will be permanently deleted",
+          "title": "Delete passwords?"
+        },
+        "delete-single": {
+          "description": "This action cannot be undone",
+          "title": "Delete password?"
+        },
+        "empty-list": {
+          "subtitle": "Press the button to add the password",
+          "subtitle-contact": "Press the button to add the contact",
+          "subtitle-media": "Press the button to add the media",
+          "title": "Your folder is empty"
+        },
+        "generate-new": "Generate new",
+        "modal": {
+          "edit-password": "Edit Password",
+          "generate-password": "Generate Password",
+          "link-label": "Link",
+          "link-placeholder": "Link here",
+          "options": {
+            "digits": "Digits",
+            "digits-example": "e.g. 123",
+            "letters": "Letters",
+            "letters-example": "e.g. abc",
+            "symbols": "Symbols",
+            "symbols-example": "e.g.%!#"
+          },
+          "password-placeholder": "Password here",
+          "title": "Secret Password",
+          "username-placeholder": "User here"
+        },
+        "page-name": "Secret Passwords",
+        "password": "Password",
+        "username": "User"
+      }
+    },
+    "select-plan": {
+      "alternative-schemes": "Alternative Schemes",
+      "advanced": "Advanced",
+      "choose-days": "Choose days",
+      "create-plan": "Create a plan",
+      "custom-plan": "Custom Plan",
+      "fasting-ends-at": "Fasting ends at",
+      "fasting-starts-at": "Fasting starts at",
+      "for-beginners": "For Beginners",
+      "hours-short": "HH",
+      "hours-eating": "{{hours, number}} hours for eating",
+      "hours-fasting": "{{hours, number}} hours fasting",
+      "minutes-short": "MM",
+      "mwf-text": "Fasting on Monday, Wednesday, Friday",
+      "mwf-title": "MWF (Mon/Wed/Fri)",
+      "page-name": "Select plan",
+      "preparing-for-fasting-title": "Preparing for Fasting",
+      "preparing-for-fasting-text-first": "Eat enough protein: meat, fish, tofu, or nuts",
+      "preparing-for-fasting-text-second": "Eat foods high in fiber: nuts, legumes, fruits, or vegetables",
+      "preparing-for-fasting-text-third": "Drink plenty of water",
+      "preparing-for-fasting-text-fours": "Choose natural, whole foods — this helps control appetite during your eating window",
+      "pro": "Pro",
+      "set-your-own": "Set your own fasting days and eating windows",
+      "tts-text": "Fasting on Tuesday, Thursday, Saturday",
+      "tts-title": "TTS (Tue/Thu/Sat)"
+    },
+    "settings": {
+      "contact": "Contact Us",
+      "change-pin-code": "Change Pin-code",
+      "page-name": "Settings",
+      "privacy": "Privacy Policy",
+      "rate": "Rate Us",
+      "report-issue": "Report Issue",
+      "restore-purchase": "Restore Purchase",
+      "share": "Share App",
+      "terms": "Terms of Use",
+      "upgrade-to-pro": "Upgrade to PRO"
+    },
+    "smart-cleaner": {
+      "blurry-photos": "Blurry photos",
+      "confirm-delete": "Delete all?",
+      "confirm-delete-contacts": "This will delete {{count}} contacts",
+      "confirm-delete-mixed": "This will delete {{photos}} photos and {{contacts}} contacts",
+      "confirm-delete-photos": "This will delete {{count}} photos",
+      "delete": "Delete",
+      "delete-error": "Error deleting items",
+      "delete-success": "Successfully deleted {{count}} items",
+      "deleting": "Deleting...",
+      "duplicate-contacts": "Duplicate contacts",
+      "duplicate-photos": "Duplicate photos",
+      "no-items-found": "No items to delete",
+      "nothing-to-delete": "Nothing to delete",
+      "screenshots": "Screenshots"
+    },
+    "speed-test": {
+      "connection-type": "Connection type",
+      "download": "Download",
+      "ip-address": "IP address",
+      "network-name": "Network Name",
+      "mbs": "mb/s",
+      "ms": "ms",
+      "no-connection-text": "Make sure you are connected to the Internet",
+      "no-connection-title": "No connection to Internet",
+      "page-name": "Speed test",
+      "ping": "Ping",
+      "start-test": "Start test",
+      "try-again": "Try again",
+      "upload": "Upload",
+      "wi-fi": "Wi-Fi"
+    },
+    "system-info": {
+      "connection": "Connection",
+      "battery": "Battery",
+      "device": "Device",
+      "download-speed-test": "Download Speed Test",
+      "free-ram": "Free RAM",
+      "free-storage": "Free Storage",
+      "hour": "{{hours, number}}h",
+      "ip": "IP",
+      "minute": "{{minutes, number}}m",
+      "mobile": "Mobile",
+      "model": "Model",
+      "name": "Name",
+      "page-name": "System Info",
+      "ram": "RAM",
+      "remaining": "Remaining time",
+      "serial-number": "Serial Number",
+      "storage": "Storage",
+      "total-storage": "Total Storage",
+      "total-ram": "Total RAM",
+      "upload-speed-test": "Upload Speed Test",
+      "version-ios": "Version iOS",
+      "wi-fi": "Wi-Fi"
+    }
+  },
+
+  "shared": {
+    "item_zero": "0 items",
+    "item_one": "{{count, number}} item",
+    "item_other": "{{count, number}} items",
+    "size": "{{bytes, size}}"
+  },
+  "cleaner": {
+    "gallery-cleaner": {
+      "count": {
+        "groups_one": "{{count}} group",
+        "groups_other": "{{count}} groups",
+        "items_one": "{{count}} item",
+        "items_other": "{{count}} items"
+      },
+      "cta": {
+        "cancel": "Cancel",
+        "select": "Select",
+        "select-all": "Select All"
+      },
+      "delete": {
+        "action": "Delete",
+        "count": "({{count}} media)",
+        "file": "file",
+        "files": "files"
+      },
+      "tabs": {
+        "blurry": "Blurry",
+        "live-photos": "Live photos",
+        "screenshots": "Screenshots",
+        "selfies": "Selfies",
+        "similar": "Similar"
+      },
+      "title": "Gallery Cleaner"
+    },
+    "contacts-organiser": {
+      "cta": {
+        "merge": "Merge",
+        "select-contacts": "Select contacts"
+      },
+      "items": "{{count}} number",
+      "items_other": "{{count}} numbers",
+      "list": {
+        "contact-name": "Contact name",
+        "empty": "Contacts not found",
+        "phone-number": "Phone number",
+        "unnamed-contact": "Unnamed contact",
+        "unknown-number": "Unknown number"
+      },
+      "delete-contacts": {
+        "action": "Delete",
+        "title": "Delete contacts?",
+        "message": "Can't be undone.",
+        "message-success": "1 contact"
+      },
+      "merge-contacts": {
+        "action": "Merge",
+        "description": "Merge {{total}} contacts into {{groups}} group?"
+      },
+      "merge-success": {
+        "merged-contacts_one": "{{count}} contact",
+        "merged-contacts_other": "{{count}} contacts"
+      },
+      "select-all": "Select All",
+      "selected": "Selected: {{count}} number",
+      "selected_other": "Selected: {{count}} numbers",
+      "tabs": {
+        "duplicate-contacts": "Duplicate contacts",
+        "duplicate-numbers": "Duplicate numbers"
+      },
+      "title": "Contacts organizer",
+      "total": "Total"
+    },
+    "happy-modal": {
+      "subtitle": "You've cleaned",
+      "title": "Great Work!"
+    }
+  }
+}

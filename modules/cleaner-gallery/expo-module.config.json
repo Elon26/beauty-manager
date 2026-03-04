@@ -1,0 +1,9 @@
+{
+  "platforms": ["ios"],
+  "ios": {
+    "modules": ["CleanerGalleryModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.cleanergallery.CleanerGalleryModule"]
+  }
+}

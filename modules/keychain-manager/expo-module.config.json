@@ -1,0 +1,9 @@
+{
+  "platforms": ["ios"],
+  "ios": {
+    "modules": ["KeychainManagerModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.keychainmanager.KeychainManagerModule"]
+  }
+}
