@@ -60,7 +60,7 @@ Clone the repository and install dependencies to run the project locally:
 
 ```bash
 # Clone the repository
-git clone [https://github.com/Elon26/beauty-manager.git](https://github.com/Elon26/beauty-manager.git)
+git clone https://github.com/Elon26/beauty-manager.git
 
 # Install dependencies
 npm install
