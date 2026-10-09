@@ -1,4 +1,4 @@
-# Fasting & Habit Tracker (Client App)
+# Beauty Manager (Client App)
 
 A modern, high-performance client application focused on complex time-based logic, real-time calculations, and smooth user interfaces.
 
